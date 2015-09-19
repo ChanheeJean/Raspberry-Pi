@@ -15,7 +15,7 @@ cvSetCaptureProperty (capture, CV_CAP_PROP_FRAME_WIDTH, wsize);
 cvSetCaptureProperty (capture, CV_CAP_PROP_FRAME_HEIGHT, hsize);
 
 IplImage* frame;
-CvHaarClassifierCascade* cvHCC = (CvHaarClassifierCascade*)cvLoad("/usr/share/o$
+CvHaarClassifierCascade* cvHCC = (CvHaarClassifierCascade*)cvLoad("//usr//share//o$
 CvMemStorage* cvMStr = cvCreateMemStorage(0);
 CvSeq* face;
 
