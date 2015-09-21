@@ -1,0 +1,65 @@
+//아두이노 DC모터 기본제어
+
+//Right Motor
+#define R_motor1pole1 2
+#define R_motor1pole2 3
+#define R_enablePin 9
+
+//Left Motor
+#define L_motor1pole1 4
+#define L_motor1pole2 5
+#define L_enablePin 10
+ 
+
+int motorSpeed = 70;
+
+void setup() {
+//Right Motor
+pinMode(R_enablePin, OUTPUT);
+pinMode( R_motor1pole1 , OUTPUT);
+pinMode( R_motor1pole2, OUTPUT);
+
+//Left Motor
+pinMode(L_enablePin, OUTPUT);
+pinMode( L_motor1pole1 , OUTPUT);
+pinMode( L_motor1pole2, OUTPUT);
+}
+
+ 
+
+void loop() {
+
+ 
+analogWrite(R_enablePin, motorSpeed);
+digitalWrite(R_motor1pole1, HIGH);
+digitalWrite(R_motor1pole2, LOW);
+analogWrite(L_enablePin, motorSpeed);
+digitalWrite(L_motor1pole1, HIGH);
+digitalWrite(L_motor1pole2, LOW);
+delay(2000);
+
+analogWrite(R_enablePin, motorSpeed);
+digitalWrite(R_motor1pole1, LOW);
+digitalWrite(R_motor1pole2, LOW);
+analogWrite(L_enablePin, motorSpeed);
+digitalWrite(L_motor1pole1, LOW);
+digitalWrite(L_motor1pole2, LOW);
+delay(2000);
+
+analogWrite(R_enablePin, motorSpeed);
+digitalWrite(R_motor1pole1, LOW);
+digitalWrite(R_motor1pole2, HIGH);
+analogWrite(L_enablePin, motorSpeed);
+digitalWrite(L_motor1pole1, LOW);
+digitalWrite(L_motor1pole2, HIGH);
+delay(2000);
+
+
+analogWrite(R_enablePin, motorSpeed);
+digitalWrite(R_motor1pole1, LOW);
+digitalWrite(R_motor1pole2, LOW);
+analogWrite(L_enablePin, motorSpeed);
+digitalWrite(L_motor1pole1, LOW);
+digitalWrite(L_motor1pole2, LOW);
+delay(2000);
+} 
